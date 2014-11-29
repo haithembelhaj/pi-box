@@ -6,7 +6,8 @@
   "dependencies": {
     "bluebird": "^2.3.11",
     "body-parser": "^1.9.2",
-    "express": "^4.10.2"
+    "express": "^4.10.2",
+    "formidable": "^1.0.15"
   },
   "devDependencies": {}
 }
