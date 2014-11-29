@@ -11,9 +11,15 @@ var spawn = require('child_process').spawn;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-//omx.start({
-//    input: 'test.mp4'
-//});
+
+app.use(express.static(__dirname + '/public'));
+
+
+app.get('/', function(rep, res){
+
+    res.render('index.html');
+});
+
 
 var vlc    = spawn('/Applications/VLC.app/Contents/MacOS/VLC', ['-']);
 
@@ -28,6 +34,7 @@ vlc.stderr.on('data', function (data) {
 vlc.on('close', function (code) {
     console.log('vlc process exited with code ' + code);
 });
+
 
 app.post('/control', function (req, res) {
 
@@ -46,9 +53,6 @@ var writeToVLCStdin = function(data) {
 app.post('/upload', function (req, res) {
 
     //vlc -
-
-
-
     var form = new formidable.IncomingForm();
     var writeStream = fs.createWriteStream('./test');
     //var Writable = require('stream').Writable;
@@ -94,7 +98,6 @@ var server = app.listen(3000, function () {
     var port = server.address().port;
 
     console.log('Example app listening at http://%s:%s', host, port)
-
 });
 
 

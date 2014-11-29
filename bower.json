@@ -1,0 +1,12 @@
+{
+  "name": "pi-box",
+  "version": "0.0.1",
+  "homepage": "non",
+  "license": "WTF",
+  "private": true,
+  "dependencies": {
+    "jquery": null,
+    "fastclick": null,
+    "semantic": "~1.0.1"
+  }
+}
