@@ -1,0 +1,12 @@
+{
+  "name": "pi-box",
+  "version": "0.0.1",
+  "description": "pi mediabox",
+  "private": true,
+  "dependencies": {
+    "bluebird": "^2.3.11",
+    "body-parser": "^1.9.2",
+    "express": "^4.10.2"
+  },
+  "devDependencies": {}
+}
