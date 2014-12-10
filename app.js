@@ -20,11 +20,10 @@ app.get('/', function(rep, res){
     res.render('index.html');
 });
 
-
-var vlc    = spawn('/Applications/VLC.app/Contents/MacOS/VLC', ['-']);
+var vlc = spawn('/Applications/VLC.app/Contents/MacOS/VLC', ['-']);
 
 vlc.stdout.on('data', function (data) {
-    console.log('' + data);
+    console.log('vlc stdout' + data);
 });
 
 vlc.stderr.on('data', function (data) {
@@ -47,6 +46,7 @@ app.post('/control', function (req, res) {
 
 
 var writeToVLCStdin = function(data) {
+    //console.log('Write to stdin');
     vlc.stdin.write(data);
 };
 
