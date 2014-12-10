@@ -4,6 +4,9 @@ public/components
 logs
 *.log
 
+# OSX
+.DS_Store
+
 # Runtime data
 pids
 *.pid

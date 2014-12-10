@@ -7,6 +7,6 @@
   "dependencies": {
     "jquery": null,
     "fastclick": null,
-    "semantic": "~1.0.1"
+    "semantic": "~1.2.0"
   }
 }
